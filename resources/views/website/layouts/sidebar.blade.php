@@ -19,7 +19,7 @@
           <!-- Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library -->
            <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('website.home') }}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
                 Beranda
@@ -36,13 +36,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('website.kas.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Input Kas</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('website.kas.show_history', ['filter' => 'bulan']) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Lihat Kas</p>
                 </a>
@@ -59,7 +59,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('website.akun.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Akun</p>
                 </a>

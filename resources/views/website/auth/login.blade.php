@@ -18,7 +18,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#">Buku Kas <br/><b><small>Masjid Al Mustaqillin</small></b></a>
+    <a href="#"><b>Kas Masjid</b> Online</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -61,7 +61,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+            <button type="submit" class="btn btn-light border btn-block">Masuk</button>
           </div>
           <!-- /.col -->
         </div>

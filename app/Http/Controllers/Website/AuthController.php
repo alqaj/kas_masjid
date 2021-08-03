@@ -29,7 +29,7 @@ class AuthController extends Controller
         $credentials = $request->only('npk', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('website.kas');
+            return redirect()->route('website.home');
         }
 
         return redirect()->back()->withErrors(['unauthenticate' => 'NPK atau password salah']);

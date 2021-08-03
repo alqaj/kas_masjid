@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('vendor/plugins/fontawesome-free/css/all.min.css') }}">
+  <!-- Toastr Alert -->
+  <link rel="stylesheet" href="{{ asset('vendor/plugins/toastr/toastr.min.css') }}">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('vendor/dist/css/adminlte.min.css') }}">
   @stack('styles')
 </head>
-<body class="hold-transition sidebar-mini sidebar-collapse text-sm">
+<body class="hold-transition sidebar-mini text-sm">
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -69,7 +72,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <span class="brand-text font-weight-bold">DKM Al-Mustaqillin</span>
+      <span class="brand-text font-weight-bold">{{ Auth::user()->company->company_name }}</span>
     </a>
 
     @include('website.layouts.sidebar')
@@ -120,6 +123,8 @@
 <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<!-- Alert Toastr -->
+<script src="{{ asset('vendor/plugins/toastr/toastr.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}"></script>
 @stack('scripts')
