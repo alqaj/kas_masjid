@@ -9,9 +9,14 @@ use Auth;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-    	$data = Company::where('id', Auth::user()->company_id)->first();
-    	return view('website.pages.home', compact(['data']));
-    }
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+	
+	public function index()
+	{
+		$data = Company::where('id', Auth::user()->company_id)->first();
+		return view('website.pages.home', compact(['data']));
+	}
 }
