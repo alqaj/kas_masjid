@@ -10,6 +10,7 @@
 			<h3 class="card-title"><strong>Lihat Kas</strong></h3>
 		</div>
 		<div class="card-body">
+			@if(count($view_data) > 0)
 			<table class="table table-stipped" id="table" width="100%">
 				<thead class="bg-light">
 					<tr>
@@ -68,6 +69,9 @@
 					</tr>
 				</tfoot>
 			</table>
+			@else
+			<p>Data Masih Kosong</p>
+			@endif
 		</div>
 	</div>
 </div>
