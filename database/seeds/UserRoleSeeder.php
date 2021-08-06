@@ -21,27 +21,58 @@ class UserRoleSeeder extends Seeder
             'telp' => '02678643131',
         ]);
 
+        $role_admin = Role::create(['name' => 'administrator']);
+
+        $role_general = Role::create(['name' => 'general']);
+
         $admin =User::create([
             'company_id' => $company->id,
             'name' => 'Alliq Aji',
             'npk' => '000075',
             'email' => 'alliq@aiia.co.id',
-            'password' => bcrypt('aiia'),
+            'password' => bcrypt('secret'),
         ]);
-
-        $user = User::create([
-            'company_id' => $company->id,
-            'name' => 'Fajar',
-            'npk' => '000700',
-            'email' => 'fajar@aiia.co.id',
-            'password' => bcrypt('aiia'),
-        ]);
-
-        $role_admin = Role::create(['name' => 'administrator']);
-
-        $role_general = Role::create(['name' => 'general']);
-
         $admin->assignRole($role_admin);
-        $user->assignRole($role_general);
+
+
+        $users = [
+            [
+                'company_id' => $company->id,
+                'name' => 'Windika Fajar P.',
+                'npk' => '000572',
+                'email' => 'qcpainting@aiia.co.id',
+                'password' => bcrypt('aiia'),
+            ],
+            [
+                'company_id' => $company->id,
+                'name' => 'Eko Purnomo',
+                'npk' => '000305',
+                'email' => 'eko@aiia.co.id',
+                'password' => bcrypt('aiia'),
+            ],
+            [
+                'company_id' => $company->id,
+                'name' => 'Aditya Teddy Marsha',
+                'npk' => '000074',
+                'email' => 'teddy@aiia.co.id',
+                'password' => bcrypt('aiia'),
+            ],
+
+            [
+                'company_id' => $company->id,
+                'name' => 'Rio Ibrahim N.',
+                'npk' => '000549',
+                'email' => 'rio.nasution@aiia.co.id',
+                'password' => bcrypt('aiia'),
+            ],
+
+
+        ];
+        
+        foreach($users as $user)
+        {
+            $new_user = User::create($user);
+            $new_user->assignRole($role_general);
+        }
     }
 }
