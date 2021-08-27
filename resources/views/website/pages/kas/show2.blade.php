@@ -40,12 +40,8 @@
 				</thead>
 				<tbody>
 					<tr>
-						@if($filter=="bulan")
-						<td colspan="3">Sisa Saldo Bulan Lalu</td>
-						@else
-						<td colspan="3">Sisa Saldo Minggu Lalu</td>
-						@endif
-						<td>{{ number_format($last_saldo,0,".",",") }}</td>
+						<th colspan="3">Saldo Akhir</th>
+						<th>{{ number_format($saldo_end,0,".",",") }}</th>
 					</tr>
 					@foreach($view_data as $d)
 					<tr>
@@ -59,8 +55,12 @@
 				</tbody>
 				<tfoot class="bg-secondaary">
 					<tr>
-						<th colspan="3">Saldo Akhir</th>
-						<th>{{ number_format($saldo_end,0,".",",") }}</th>
+						@if($filter=="bulan")
+						<td colspan="3">Sisa Saldo Bulan Lalu</td>
+						@else
+						<td colspan="3">Sisa Saldo Minggu Lalu</td>
+						@endif
+						<td>{{ number_format($last_saldo,0,".",",") }}</td>
 					</tr>
 					<tr>
 						<th colspan="4">

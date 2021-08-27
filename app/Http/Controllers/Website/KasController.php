@@ -135,7 +135,7 @@ class KasController extends Controller
         }
 
         // return $view_data;
-
+        $view_data = array_reverse($view_data);
         return view('website.pages.kas.show2', ['view_data' => $view_data, 'last_saldo' => $last_saldo, 'filter' => $request->filter ]);
 
     }
