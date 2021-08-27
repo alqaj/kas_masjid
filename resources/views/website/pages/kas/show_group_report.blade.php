@@ -65,6 +65,11 @@
           </table>
         </div>
       </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <a href="{{ route('website.kas.report') }}" class="float-right btn btn-light border" target="_blank"><i class="fas fa-print"></i> Cetak Laporan Bulanan</a>
+        </div>
+      </div>
     </div>
     <!-- /.card-body -->
   </div>
