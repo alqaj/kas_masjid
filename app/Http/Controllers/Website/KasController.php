@@ -117,7 +117,7 @@ class KasController extends Controller
         $view_data = array();
         $last_saldo = $saldo;
         $i=1;
-
+        $saldo_end =0;
         foreach ($data as $d) {
             if($d->jenis_akun=="in")
                 $saldo += $d->jumlah;
@@ -131,12 +131,13 @@ class KasController extends Controller
                 'saldo' => $saldo
             ];
             array_push($view_data, $datum);
+            $saldo_end = $saldo;
             $i++;
         }
 
         // return $view_data;
         $view_data = array_reverse($view_data);
-        return view('website.pages.kas.show2', ['view_data' => $view_data, 'last_saldo' => $last_saldo, 'filter' => $request->filter ]);
+        return view('website.pages.kas.show2', ['view_data' => $view_data, 'last_saldo' => $last_saldo, 'filter' => $request->filter, 'saldo_end' => $saldo_end ]);
 
     }
 
