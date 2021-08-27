@@ -29,12 +29,14 @@ class AkunController extends Controller
 		$request->validate(
 			[
 				'jenis_akun' => 'required',
+				'grup_akun' => 'required',
 				'nama_akun' => 'required'
 			]
 		);
 
 		Akun::create([
 			'jenis_akun' => $request->jenis_akun,
+			'grup_akun' => $request->grup_akun,
 			'nama_akun' => $request->nama_akun
 		]);
 

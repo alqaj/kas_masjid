@@ -18,12 +18,12 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b>Kas Masjid</b> Online</a>
+    <a href="#"><b>Masjid</b> Kita</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Masuk untuk memulai</p>
+      <p class="login-box-msg">Platform administrasi masjid</p>
 
       <form action="{{ route('website.auth.authenticate') }}" method="post">
         @csrf

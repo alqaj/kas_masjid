@@ -34,12 +34,16 @@ Route::group(['namespace' => 'Website', 'as' => 'website.'], function() {
         // Route::get('/ajax_showkas', 'KasController@ajax_show')->name('kas.ajax_show');
         Route::get('/show_history', 'KasController@show_history')->name('kas.show_history');
         Route::get('/report', 'KasController@report')->name('kas.report');
+        Route::get('/show_grup_report', 'KasController@show_grup_report')->name('kas.show_grup_report');
+        Route::get('/ajax_show_grup_report', 'KasController@ajax_show_grup_report')->name('kas.ajax_show_grup_report');
 
         /* Akun */
         Route::get('/akun', 'AkunController@index')->name('akun.index');
         Route::get('/ajaxakun', 'AkunController@ajax_index')->name('akun.ajax_index');
         Route::get('/tambahakun', 'AkunController@tambah')->name('akun.tambah');
         Route::post('/tambahakun', 'AkunController@simpan')->name('akun.simpan');
+
+        Route::get('/tabungan', 'TabunganController@index')->name('tabungan.index');
 
     });
 });

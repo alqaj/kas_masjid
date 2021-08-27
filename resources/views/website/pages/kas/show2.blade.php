@@ -41,9 +41,9 @@
 				<tbody>
 					<tr>
 						@if($filter=="bulan")
-						<td colspan="3">Saldo Bulan Lalu</td>
+						<td colspan="3">Sisa Saldo Bulan Lalu</td>
 						@else
-						<td colspan="3">Saldo Minggu Lalu</td>
+						<td colspan="3">Sisa Saldo Minggu Lalu</td>
 						@endif
 						<td>{{ number_format($last_saldo,0,".",",") }}</td>
 					</tr>
@@ -70,7 +70,55 @@
 				</tfoot>
 			</table>
 			@else
-			<p>Data Masih Kosong</p>
+			<table class="table table-stipped" id="table" width="100%">
+				<thead class="bg-light">
+					<tr>
+						<th colspan="4">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="input-group">
+										<select class="custom-select custom-select-md" id="filter" name="filter" aria-label="Example select with button addon">
+											<option value="" selected="selected" disabled="">Periode..</option>
+											<option value="minggu">Minggu Ini</option>
+											<option value="bulan">Bulan Ini</option>
+										</select>
+										<div class="input-group-append">
+											<button class="btn-search btn btn-light border" type="button"><i class="fas fa-search"></i> Cari</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th width="45%">Nama Akun</th>
+						<th width="25%">Tanggal Mutasi</th>
+						<th width="15%">Jumlah Mutasi</th>
+						<th width="15%">Saldo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						@if($filter=="bulan")
+						<td colspan="3">Sisa Saldo Bulan Lalu</td>
+						@else
+						<td colspan="3">Sisa Saldo Minggu Lalu</td>
+						@endif
+						<td>{{ number_format($last_saldo,0,".",",") }}</td>
+					</tr>
+				</tbody>
+				<tfoot class="bg-secondaary">
+					<tr>
+						<th colspan="3">Saldo Akhir</th>
+						<th>{{ number_format($last_saldo,0,".",",") }}</th>
+					</tr>
+					<tr>
+						<th colspan="4">
+							<a href="{{ route('website.kas.report') }}" class="float-right btn btn-light border" target="_blank"><i class="fas fa-print"></i> Cetak Laporan Bulanan</a>
+						</th>
+					</tr>
+				</tfoot>
+			</table>
 			@endif
 		</div>
 	</div>
