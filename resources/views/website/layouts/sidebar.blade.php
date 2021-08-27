@@ -49,6 +49,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('website.tabungan.index') }}" class="nav-link">
+              <i class="nav-icon fas fas fa-address-card"></i>
+              <p>
+                Tabungan Qurban
+              </p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-database"></i>

@@ -41,5 +41,7 @@ Route::group(['namespace' => 'Website', 'as' => 'website.'], function() {
         Route::get('/tambahakun', 'AkunController@tambah')->name('akun.tambah');
         Route::post('/tambahakun', 'AkunController@simpan')->name('akun.simpan');
 
+        Route::get('/tabungan', 'TabunganController@index')->name('tabungan.index');
+
     });
 });
