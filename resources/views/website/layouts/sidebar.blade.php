@@ -47,6 +47,12 @@
                   <p>Lihat Kas</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ route('website.kas.show_grup_report') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Laporan Kas</p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
