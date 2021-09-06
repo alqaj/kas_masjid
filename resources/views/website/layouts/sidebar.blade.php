@@ -30,7 +30,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Buku Kas
+                Mutasi Kas
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -38,13 +38,19 @@
               <li class="nav-item">
                 <a href="{{ route('website.kas.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Input Kas</p>
+                  <p>Input Mutasi Kas</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('website.kas.show_history', ['filter' => 'bulan']) }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Lihat Kas</p>
+                  <p>Lihat Mutasi Kas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('website.proposal.history') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Lihat History Proposal</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -76,6 +82,12 @@
                 <a href="{{ route('website.akun.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Akun</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('website.proposal.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Proposal</p>
                 </a>
               </li>
             </ul>

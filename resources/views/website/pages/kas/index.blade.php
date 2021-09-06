@@ -7,7 +7,7 @@
   <!-- jquery validation -->
   <div class="card card-default">
     <div class="card-header">
-      <h3 class="card-title"><strong>Input Kas</strong></h3>
+      <h3 class="card-title"><strong>Input Mutasi Kas</strong></h3>
     </div>
     <!-- /.card-header -->
     <!-- form start -->

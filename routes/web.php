@@ -43,6 +43,15 @@ Route::group(['namespace' => 'Website', 'as' => 'website.'], function() {
         Route::get('/tambahakun', 'AkunController@tambah')->name('akun.tambah');
         Route::post('/tambahakun', 'AkunController@simpan')->name('akun.simpan');
 
+        /* Proposal */
+        Route::get('/indexproposal', 'ProposalController@index')->name('proposal.index');
+        Route::get('/ajaxindexproposal', 'ProposalController@ajax_index')->name('proposal.ajax_index');
+        Route::get('/historyproposal', 'ProposalController@history')->name('proposal.history');
+        Route::get('/ajaxhistoryproposal', 'ProposalController@ajax_history')->name('proposal.ajax_history');
+        Route::get('/tambahproposal', 'ProposalController@create')->name('proposal.create');
+        Route::post('/simpanproposal', 'ProposalController@store')->name('proposal.store');
+        
+
         Route::get('/tabungan', 'TabunganController@index')->name('tabungan.index');
 
     });
